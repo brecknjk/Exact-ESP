@@ -1,0 +1,6 @@
+[submodule "cpp_program/vendor/osmpbf"]
+	path = cpp_program/vendor/osmpbf
+	url = https://github.com/inphos42/osmpbf.git
+# [submodule "cpp_program/vendor/Simple-Web-Server"]
+# 	path = cpp_program/vendor/Simple-Web-Server
+# 	url = https://github.com/eidheim/Simple-Web-Server.git

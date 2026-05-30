@@ -1,0 +1,88 @@
+{
+    "_comment_DEBUG_LEVEL" : "if set to > 0, the program will print debug messages and performe checks",
+    "DEBUG_LEVEL" : 0,
+    "_comment_VERBOSE_LEVEL" : "controlls the amount and importance of log messages, default: 1 is minimal",
+    "VERBOSE_LEVEL" : 1,
+
+    "_comment_path_to_parentFolder" : "path to folder containing this project for example: /home/brecknjk/Documents/ContinuousDijkstra or /media/jannik/Daten/Dokumente/UNI/Doktor/ContinuousDijkstra",
+    "path_to_parentFolder" : "/media/jannik/Daten/Dokumente/UNI/Doktor/ContinuousDijkstra",
+
+    "_comment_seaPoint" : "Default sea point for routing = 30.0, -35.0, aka -17.64172, 104.66383 (somewhere in the indian ocean)",
+    "seaPoint" : {
+        "lat" : 30,
+        "lon" : -35
+    },
+    "_comment_bound_domain" : "construct a bounding box of constrained edges (original: -89.5, -179.9 ...)",
+    "bound_domain" : {
+        "min_lat" : 0,
+        "min_lon" : 0,
+        "max_lat" : 0,
+        "max_lon" : 0
+    },
+    "_comment_use_merkartor" : "True if points are Coordinates and should be converted to Merkartor-Coords",
+    "use_merkartor" : false,
+    
+    "_comment_polyanya_settings" : "settings regarding the routing algorithm",
+    "polyanya_settings" : {
+        "use_simple_distance_heuristik": true,
+        "no_heuristik" : false,
+        "use_deadend_pruning" : true,
+        "use_simple_pruning_heuristik" : true,
+        "use_advanced_pruning" : true,
+        "use_edgePruning" : false,
+        "merge_cells" : false,
+        "merge_cells_before_deadend_pruning" : false,
+        "dont_gen_twice" : true,
+        "breakCondition" : true,
+        "skip_ahead" : true,
+        "use_landmarks" : false,
+        "landmark_count" : 64,
+        "landmarks_to_use" : 4,
+        "ignore_collinear" : true
+    },
+    
+    "_comment_gl" : "output settings for .gl files to illustrate the route/searchspace/graph",
+    "pringGL_searchspace" : false,
+    "pringGL_searchspace_path" : "/data/router/searchspace_coastlines.gl",
+    "pringGL_route" : false,
+    "pringGL_route_path" : "/data/router/route_coastlines.gl",
+    "pringGL_searchspaceAndRoute_path" : "/data/router/searchspaceAndRoute_coastlines.gl",
+    "pringGL_graph" : false,
+    "pringGL_graph_path" : "/data/router/graph_coastlines.gl",
+    "print_deadend_edges" : true,
+    "print_freeSpace_edges" : true,
+
+    "pringMesh_graph" : true,
+    "pringMesh_graph_path" : "/data/router/coastlines.mesh",
+    "printScenarioFile" : true,
+    "printScenarioFile_path" : "/data/router/coastlines.scen",
+    "pringOFF_graph" : false,
+    "pringOFF_graph_path" : "/data/router/coastlines.off",
+
+    "extractor" : {
+        "pruneTriangulation" : false,
+        "pruneRatio_longestToShortestEdge2" : 100.0,
+        "_comment_pruneRatio_longestToShortestEdge2_default" : "400.0",
+        "pruneRatio_maxVertexCount" : 1.15,
+        "_comment_pruneRatio_maxVertexCount_default" : "1.005"
+    },
+    
+    "batch" : {
+        "inputFile" : "/data/router/coastlines.scen",
+        "outputFile" : "/data/batch/output.txt",
+        "read_batchFile" : false,
+        "write_batchFile" : true
+    },
+
+    "server" : {
+        "port" : 8080,
+        "host" : "localhost"
+    },
+
+    "tests" : {
+        "rounds_per_test" : 400,
+        "_comment_rounds_per_test" : "number of test rounds to perform per test scenario or benchmark"
+    },
+
+    "local" : {}
+}

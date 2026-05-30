@@ -1,0 +1,11 @@
+# set(USE_OSMPBF on)
+set(USE_OSMPBF off)
+
+add_subdirectory(utils utils)
+if ( USE_OSMPBF )
+    add_compile_definitions(USE_OSMPBF)
+    add_subdirectory(vendor/osmpbf osmpbf)
+endif()
+add_subdirectory(extractor extractor)
+# add_subdirectory(vendor/Simple-Web-Server Simple-Web-Server)
+add_subdirectory(router router)
