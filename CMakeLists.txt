@@ -11,7 +11,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx2 -mbmi2")
 # set(PROTOBUF_INCLUDE_DIR "/home/brecknjk/src/protobuf/src")
 # set(Protobuf_PROTOC_EXECUTABLE "/home/brecknjk/src/protobuf/protoc")
 set(CMAKE_BUILD_TYPE Release)
-set(CGAL_USE_EPECK true)
+# set(CGAL_USE_EPECK true)
 
 
 # CGAL and its components
